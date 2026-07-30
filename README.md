@@ -24,6 +24,10 @@ The pasted text is split into lines. The first line matching a status or request
 
 Everything runs in your browser as plain text parsing. The tool never fetches a URL or sends your headers anywhere. There are no analytics and no external scripts. Confirm with the DevTools network tab that no requests are made.
 
+## More
+
+Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
+
 ## License
 
 MIT. Copyright 0xelitesystem 2026.
