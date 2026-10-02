@@ -2,9 +2,18 @@
 
 Paste a raw HTTP response or request header block and get a per-header explanation plus a security posture summary. It parses text only, makes no requests, and runs entirely in your browser with no external dependencies. Works offline.
 
-## Live demo
+**Live demo:** https://0xelitesystem.github.io/http-header-analyzer/
 
-https://0xelitesystem.github.io/http-header-analyzer/
+## Use
+
+1. Paste a raw response or request header block into the Header block box, or click **Load example**.
+2. Click **Analyze** (or press Ctrl or Cmd plus Enter).
+3. Read the per-header explanations and the security flags.
+4. Check the posture summary for recommended headers that are missing.
+
+## Why this exists
+
+Header dumps from curl or DevTools are dense, and a weak or missing security header is easy to miss. This tool explains each header and flags weak configurations from pasted text alone. It is one HTML file with inline CSS and JavaScript: no account, no tracking, no analytics, no external scripts or fonts, and it works offline. MIT licensed, so you can fork it, self-host it, or read every line.
 
 ## Features
 
@@ -22,7 +31,20 @@ The pasted text is split into lines. The first line matching a status or request
 
 ## Privacy
 
-Everything runs in your browser as plain text parsing. The tool never fetches a URL or sends your headers anywhere. There are no analytics and no external scripts. Confirm with the DevTools network tab that no requests are made.
+Everything runs in your browser as plain text parsing. The tool never fetches a URL or sends your headers anywhere. There are no analytics and no external scripts. Confirm with the DevTools network tab that no requests are made. The only thing written to storage is your light or dark theme choice, saved in localStorage under the key `theme`.
+
+## Run locally
+
+```bash
+git clone https://github.com/0xelitesystem/http-header-analyzer
+cd http-header-analyzer
+```
+
+Then open `index.html` in any modern browser. Or serve the folder with `python -m http.server 8000` and visit http://localhost:8000.
+
+## Build
+
+No build step. The whole tool is one `index.html` with no dependencies, so there is nothing to install or compile.
 
 ## More
 
